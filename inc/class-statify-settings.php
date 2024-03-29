@@ -276,7 +276,7 @@ class Statify_Settings {
 			?>
 			<p><label for="statify-<?php echo esc_html( $input_id ); ?>-<?php echo esc_html( $role ); ?>">
 			<?php
-			echo sprintf(
+			printf(
 				'<input id="statify-%1$s-%2$s" type="checkbox" name="statify[%3$s][]" value="%2$s" %4$s>',
 				esc_html( $input_id ),
 				esc_html( $role ),
@@ -416,6 +416,7 @@ class Statify_Settings {
 		// Sanitize user roles (preserve NULL, if unset).
 		if ( isset( $options['show_widget_roles'] ) ) {
 			$available_roles = apply_filters( 'statify__available_roles', wp_roles()->roles );
+			$res['show_widget_roles'] = array();
 			foreach ( $options['show_widget_roles'] as $saved_role ) {
 				if ( in_array( $saved_role, array_keys( $available_roles ), true ) ) {
 					array_push( $res['show_widget_roles'], $saved_role );
@@ -469,5 +470,4 @@ class Statify_Settings {
 
 		<?php
 	}
-
 }

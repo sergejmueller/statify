@@ -237,9 +237,6 @@ class Statify {
 	 * @since  2.0.0 Migration from Statify_Frontend to Statify class.
 	 */
 	private static function skip_tracking() {
-		if ( function_exists( 'apply_filters_deprecated' ) ) {
-			apply_filters_deprecated( 'statify_skip_tracking', array( '' ), '1.5.0', 'statify__skip_tracking' );
-		}
 		// Skip tracking via Hook.
 		$skip_hook = apply_filters( 'statify__skip_tracking', null );
 		if ( null !== $skip_hook ) {
@@ -265,9 +262,9 @@ class Statify {
 		}
 
 		// Skip logged in users, if enabled.
-		if ( self::SKIP_USERS_ALL === self::$_options['skip']['logged_in'] && is_user_logged_in() ||
+		if ( ( self::SKIP_USERS_ALL === self::$_options['skip']['logged_in'] && is_user_logged_in() ) ||
 			// Only skip administrators.
-			self::SKIP_USERS_ADMIN === self::$_options['skip']['logged_in'] && current_user_can( 'manage_options' ) ) {
+			 ( self::SKIP_USERS_ADMIN === self::$_options['skip']['logged_in'] && current_user_can( 'manage_options' ) ) ) {
 			return true;
 		}
 
@@ -362,7 +359,7 @@ class Statify {
 
 		if ( false === $disallowed_keys ) {
 			// WordPress < 5.5 uses the old key.
-			$disallowed_keys = get_option( 'blacklist_keys' );
+			$disallowed_keys = get_option( 'blacklist_keys' ); // phpcs:ignore WordPress.WP.DeprecatedParameterValues.Found
 		}
 
 		$disallowed_keys = trim( $disallowed_keys );
