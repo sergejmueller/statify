@@ -262,9 +262,9 @@ class Statify {
 		}
 
 		// Skip logged in users, if enabled.
-		if ( self::SKIP_USERS_ALL === self::$_options['skip']['logged_in'] && is_user_logged_in() ||
+		if ( ( self::SKIP_USERS_ALL === self::$_options['skip']['logged_in'] && is_user_logged_in() ) ||
 			// Only skip administrators.
-			self::SKIP_USERS_ADMIN === self::$_options['skip']['logged_in'] && current_user_can( 'manage_options' ) ) {
+			 ( self::SKIP_USERS_ADMIN === self::$_options['skip']['logged_in'] && current_user_can( 'manage_options' ) ) ) {
 			return true;
 		}
 
