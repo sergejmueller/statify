@@ -126,26 +126,13 @@ class Statify_Dashboard extends Statify {
 		wp_register_script(
 			'statify_chart_js',
 			plugins_url( 'js/dashboard.min.js', STATIFY_FILE ),
-			array( 'wp-api-fetch', 'chartist_tooltip_js' ),
+			array( 'wp-api-fetch', 'chartist_tooltip_js', 'wp-i18n' ),
 			self::$_plugin_version,
 			true
 		);
 
-		// Localize strings.
-		wp_localize_script(
-			'statify_chart_js',
-			'statifyDashboard',
-			array(
-				'i18n'  => array(
-					'error'        => esc_html__( 'Error loading data.', 'statify' ),
-					'nodata'       => esc_html__( 'No data available.', 'statify' ),
-					'pageview'     => esc_html__( 'Pageview', 'statify' ),
-					'pageviews'    => esc_html__( 'Pageviews', 'statify' ),
-					'since'        => esc_html__( 'since', 'statify' ),
-					'today'        => esc_html__( 'today', 'statify' ),
-				),
-			)
-		);
+		// Sets translated strings for the script.
+		wp_set_script_translations( 'statify_chart_js', 'statify' );
 	}
 
 
