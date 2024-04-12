@@ -126,7 +126,7 @@ class Statify_Dashboard extends Statify {
 		wp_register_script(
 			'statify_chart_js',
 			plugins_url( 'js/dashboard.min.js', STATIFY_FILE ),
-			array( 'wp-api-fetch', 'chartist_tooltip_js' ),
+			array( 'wp-api-fetch', 'chartist_tooltip_js', 'wp-i18n' ),
 			self::$_plugin_version,
 			true
 		);
