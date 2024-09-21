@@ -1,7 +1,7 @@
 # Statify #
 * Contributors:      pluginkollektiv
 * Donate link:       https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=TD4AMD2D8EMZW
-* Tags:              analytics, dashboard, pageviews, privacy, statistics, stats, visits, web stats, widget
+* Tags:              analytics, pageviews, privacy, statistics, stats
 * Requires at least: 5.1
 * Tested up to:      6.6
 * Requires PHP:      7.2
