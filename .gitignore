@@ -4,6 +4,7 @@
 composer.lock
 coverage
 css/*.min.css
+dist
 js/*.min.js
 js/*.min.js.map
 lib
