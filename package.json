@@ -1,13 +1,13 @@
 {
   "private": true,
   "devDependencies": {
-    "@wordpress/eslint-plugin": "^19.1.0",
-    "@wordpress/stylelint-config": "^22.1.0",
-    "chai": "^4.4.1",
-    "eslint": "^8.57.0",
-    "mocha": "^10.4.0",
-    "nyc": "^17.0.0",
-    "sinon": "^18.0.0",
-    "stylelint": "^14.16.1"
+    "@wordpress/eslint-plugin": "^21.1.2",
+    "@wordpress/stylelint-config": "^23.0.0",
+    "chai": "^4.5.0",
+    "eslint": "^8.57.1",
+    "mocha": "^10.7.3",
+    "nyc": "^17.1.0",
+    "sinon": "^19.0.2",
+    "stylelint": "^16.9.0"
   }
 }
