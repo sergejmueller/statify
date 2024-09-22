@@ -269,7 +269,8 @@ class Statify {
 			'statifyDashboard',
 			array(
 				'i18n'  => array(
-					'months' => array_map(
+					'sitename' => sanitize_key( get_bloginfo( 'name' ) ),
+					'months'   => array_map(
 						function ( $m ) {
 							return date_i18n( 'M', strtotime( '0000-' . $m . '-01' ) );
 						},
