@@ -51,11 +51,11 @@ class Statify_Install {
 	 *
 	 * @since 1.4.4
 	 *
-	 * @param int $site_id Site ID.
+	 * @param WP_Site $new_site Site object.
 	 */
-	public static function init_site( int $site_id ): void {
+	public static function init_site( WP_Site $new_site ): void {
 
-		switch_to_blog( $site_id );
+		switch_to_blog( $new_site->site_id );
 
 		self::_apply();
 
