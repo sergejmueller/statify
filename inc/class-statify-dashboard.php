@@ -143,8 +143,8 @@ class Statify_Dashboard extends Statify {
 			'statify_chart_js',
 			'statify_translations',
 			array(
-				'pageview'  => strip_tags( esc_html__( 'Pageview', 'statify' ) ),
-				'pageviews' => strip_tags( esc_html__( 'Pageviews', 'statify' ) ),
+				'pageview'  => wp_strip_all_tags( __( 'Pageview', 'statify' ) ),
+				'pageviews' => wp_strip_all_tags( __( 'Pageviews', 'statify' ) ),
 			)
 		);
 	}
