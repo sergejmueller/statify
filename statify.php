@@ -75,6 +75,7 @@ function statify_autoload( $class ) {
 		'Statify_Settings',
 		'Statify_Table',
 		'Statify_Cron',
+		'Statify_Counter_Column',
 	);
 
 	if ( in_array( $class, $plugin_classes, true ) ) {
