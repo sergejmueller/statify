@@ -7,7 +7,7 @@
  * Author URI:  https://pluginkollektiv.org/
  * Plugin URI:  https://statify.pluginkollektiv.org/
  * License:     GPLv3 or later
- * Version:     1.8.4
+ * Version:     1.8.5
  *
  * @package WordPress
  */
