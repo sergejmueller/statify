@@ -33,6 +33,8 @@
         <exclude name="WordPress.VIP.ValidatedSanitizedInput.InputNotSanitized"/>
         <!-- Precision alignment is used in HTML views -->
         <exclude name="WordPress.WhiteSpace.PrecisionAlignment.Found" />
+        <!-- PHP 5.2 compatibility -->
+        <exclude name="Modernize.FunctionCalls.Dirname.FileConstant"/>
     </rule>
 
     <!-- Include sniffs for PHP cross-version compatibility. -->
