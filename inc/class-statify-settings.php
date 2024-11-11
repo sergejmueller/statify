@@ -375,5 +375,4 @@ class Statify_Settings {
 
 		<?php
 	}
-
 }

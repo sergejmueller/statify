@@ -313,7 +313,7 @@ class Statify_Frontend extends Statify {
 
 		if ( false === $disallowed_keys ) {
 			// WordPress < 5.5 uses the old key.
-			$disallowed_keys = get_option( 'blacklist_keys' );
+			$disallowed_keys = get_option( 'blacklist_keys' );  // phpcs:ignore WordPress.WP.DeprecatedParameterValues.Found
 		}
 
 		$disallowed_keys = trim( $disallowed_keys );
