@@ -3,6 +3,7 @@
 .nyc_output
 composer.lock
 coverage
+dist/
 css/*.min.css
 js/*.min.js
 js/*.min.js.map
